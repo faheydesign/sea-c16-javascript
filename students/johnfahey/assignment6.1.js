@@ -36,21 +36,18 @@ var people = [
   {
     name: 'Finus'
   }
-];
+]
 
 
-function oldestLivingParent(peeps){
-  for(var i = 0; i < peeps.length; i++){
-    if (peeps[i].age){
-      for(var j = 0; j < peeps.length; j++){
-        if ( peeps[i].name == peeps[j].parent){
-          return peeps[i].name;
-        }
-      }
-    }
+function oldestLivingParent(test){
+  // console.log( Math.max.apply( Math, test) ); //find the largest amount in an array
+  for(var i = 0; i < test.length; i++){
+    console.log(test[i]);
   }
 }
 
-
 oldestLivingParent(people);
 // -> 'Don'
+
+
+
