@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+</head>
+<body>
+
+<div class="tabs" ng-controller="TabController as tab">
+    <nav>
+    <h1>Navigation</h1>
+    <ul>
+        <li>
+            <a href="#home" ng-click="tab.activeTab(1)" ng-class="{ active: tab.isSelected(1) }">Home</a>
+        </li>
+        <li>
+            <a href="#articles" ng-click="tab.activeTab(2)" ng-class="{ active: tab.isSelected(2) }">Articles</a>
+        </li>
+        <li>
+            <a href="#portfolio" ng-click="tab.activeTab(3)" ng-class="{ active: tab.isSelected(3) }">Porfolio</a>
+        </li>
+    </ul>
+  </nav>
+  <div id="home" ng-show="tab.isSelected(1)" ng-class="{ active: tab.isSelected(1) }"></div>
+  <div id="articles" ng-show="tab.isSelected(2)" ng-class="{ active: tab.isSelected(2) }"></div>
+  <div id="portfolio" ng-show="tab.isSelected(3)" ng-class="{ active: tab.isSelected(3) }"></div>
+
+</div>
+
+<section>The output area is here.</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
+
+
